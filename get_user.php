@@ -1,10 +1,10 @@
 <?php  
  require "init.php";  
  $name = $_POST["user"];  
- $user_name = $_POST["username"];  
+ $email = $_POST["email"];  
  $user_pass = $_POST["password"];  
 
- $sql_query = "SELECT * FROM Users WHERE user_name = '$user_name' AND user_pass = '$user_pass';";  
+ $sql_query = "SELECT * FROM Users WHERE email = '$email' AND password = '$user_pass';";  
  if ($result=mysqli_query($con,$sql_query))
   {
  	if($row=mysqli_fetch_row($result))
