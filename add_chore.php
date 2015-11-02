@@ -7,7 +7,7 @@
  $assignedUser = $_POST["assignedUser"];  
  $groupid = $_POST['groupid'];
   
- $sql_query = "INSERT INTO Chores(title,`desc`,assigned_to,posted_by, groupid) VALUES('$title','$desc',' $assignedUser','$requestUser','$groupid');";  
+ $sql_query = "INSERT INTO Chores(name,`desc`,assigned_to,posted_by, groupid) VALUES('$title','$desc',' $assignedUser','$requestUser','$groupid');";  
  if($con->query($sql_query) === TRUE){
 	echo "Chore added";
 	} else {
