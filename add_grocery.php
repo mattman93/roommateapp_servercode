@@ -11,7 +11,7 @@
  $purc_user = $_POST['purchaseUser'];
  $groupid = $_POST['groupid'];
   
- $sql_query = "INSERT INTO Grocery_item(item_name, quantity, dateRequested, datePurchased, isPurchased, cost, requestUser, purchaseUser, groupid) VALUES('$item_name', '$quantity', '$dr', '$dp','$ip','$cst','$req_user','$purc_user') WHERE groupid = '$groupid';";  
+ $sql_query = "INSERT INTO Grocery_item(item_name, quantity, dateRequested, datePurchased, isPurchased, cost, requestUser, purchaseUser, groupid) VALUES('$item_name', '$quantity', '$dr', '$dp','$ip','$cst','$req_user','$purc_user', '$groupid');";  
  if($con->query($sql_query) === TRUE){
 	echo "Grocery added";
 	} else {
