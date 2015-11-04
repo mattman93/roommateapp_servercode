@@ -12,11 +12,11 @@
  } else {
  	$is_c = 0;
  }
-  
- $sql_query = "INSERT INTO Maintenance_item(`desc`, causingUser, purchaseUser, isComplete, groupid) VALUES('$desc', '$causingUser', '$purchaseUser','$is_c', '$groupid');";  
+
+ $sql_query = "UPDATE Grocery_item SET `desc` = '$desc', causingUser = '$causingUser', purchaseUser = '$purchaseUser', isComplete = '$is_c' WHERE id = '$groupid';";  
  if($con->query($sql_query) === TRUE){
-	echo "Maintenance item added";
+	echo "Maintenance item edited";
 	} else {
-		echo "Error adding Maintenance item";
+		echo "Error editing Maintenance item";
 	}
  ?> 
