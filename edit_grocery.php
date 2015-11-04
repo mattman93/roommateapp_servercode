@@ -8,9 +8,8 @@
  $cst = $_POST["cst"];  
  $req_user = $_POST["requestUser"];  
  $purc_user = $_POST['purchaseUser'];
- $groupid = $_GET['groupid'];
-  
- $sql_query = "UPDATE Grocery_item SET item_name = '$item_name', quantity = '$quantity', dateRequested = '$dr', isPurchased = '$ip', cost = '$cst', requestUser = '$req_user', purchaseUser = '$purc_user' WHERE groupid = '$groupid';";  
+ $grc_id = $_GET["grcid"];
+ $sql_query = "UPDATE Grocery_item SET item_name = '$item_name', quantity = '$quantity', dateRequested = '$dr', isPurchased = '$ip', cost = '$cst', requestUser = '$req_user', purchaseUser = '$purc_user' WHERE id = '$grc_id';";  
  if($con->query($sql_query) === TRUE){
 	echo "Grocery edited";
 	} else {
