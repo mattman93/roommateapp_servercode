@@ -5,7 +5,7 @@
  $causingUser = $_POST["causingUser"];  
  $purchaseUser = $_POST["purchaseUser"];  
  $isComplete = $_POST["isComplete"];  
- $groupid = $_GET['groupid'];
+ $groupid = $_POST['groupid'];
 
  if($isComplete == "true"){
  	$is_c = 1;

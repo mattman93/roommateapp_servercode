@@ -4,8 +4,8 @@
  $desc = $_POST["desc"];  
  $causingUser = $_POST["causingUser"];  
  $purchaseUser = $_POST["purchaseUser"];  
- $isComplete = $_POST["isComplete"];  
- $groupid = $_GET['groupid'];
+ $isComplete = $POST["isComplete"];  
+ $groupid = $_POST['groupid'];
 
  if($isComplete == "true"){
  	$is_c = 1;
@@ -13,7 +13,7 @@
  	$is_c = 0;
  }
 
- $sql_query = "UPDATE Grocery_item SET `desc` = '$desc', causingUser = '$causingUser', purchaseUser = '$purchaseUser', isComplete = '$is_c' WHERE id = '$groupid';";  
+ $sql_query = "UPDATE Maintenance_item SET `desc` = '$desc', causingUser = '$causingUser', purchaseUser = '$purchaseUser', isComplete = '$is_c' WHERE id = '$groupid';";  
  if($con->query($sql_query) === TRUE){
 	echo "Maintenance item edited";
 	} else {
