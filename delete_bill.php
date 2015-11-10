@@ -3,7 +3,7 @@
 
 $bill_id = $_POST["bill_id"];  
  
- $sql_query = "DELETE FROM Billd WHERE id = '$bill_id';";
+ $sql_query = "DELETE FROM Bills WHERE id = '$bill_id';";
   
  if($con->query($sql_query) === TRUE){
 	echo "Bill deleted";
