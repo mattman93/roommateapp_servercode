@@ -6,13 +6,9 @@
  $purchaseUser = $_POST["purchaseUser"];  
  $isComplete = $POST["isComplete"]; 
 $id = $_POST['id'];
- if($isComplete == "true"){
- 	$is_c = 1;
- } else {
- 	$is_c = 0;
- }
+ 
 
- $sql_query = "UPDATE Maintenance_item SET `desc` = '$desc', causingUser = '$causingUser', purchaseUser = '$purchaseUser', isComplete = '$is_c' WHERE id = '$id';";  
+ $sql_query = "UPDATE Maintenance_item SET `desc` = '$desc', causingUser = '$causingUser', purchaseUser = '$purchaseUser', isComplete = '$isComplete' WHERE id = '$id';";  
  if($con->query($sql_query) === TRUE){
 	echo "Maintenance item edited";
 	} else {
